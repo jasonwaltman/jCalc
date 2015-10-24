@@ -32,7 +32,7 @@
             • Double-click MS = Reset Memory<LineBreak/>
             <LineBreak/>
             by Jason Waltman<LineBreak/>
-            <Hyperlink NavigateUri="http://www.jasonwaltman.com" RequestNavigate="Hyperlink_RequestNavigate">www.jasonwaltman.com</Hyperlink>
+            <Hyperlink NavigateUri="https://github.com/jasonwaltman/jCalc" RequestNavigate="Hyperlink_RequestNavigate">https://github.com/jasonwaltman/jCalc</Hyperlink>
         </TextBlock>
         <Image x:Name="image" HorizontalAlignment="Left" Height="64" Margin="10,10,0,0" VerticalAlignment="Top" Width="64" Source="Resources/jCalcIcon.ico" />
     </Grid>
