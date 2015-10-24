@@ -14,7 +14,7 @@ jCalc is a small Windows Presentation Foundation (WPF) Visual Studio (2015) proj
 Shortcuts       | Action
 --------------- | -------------
 `Esc` or `C`    | Clear / All Clear
-`Backspace      | Delete last entered digit
+`Backspace`      | Delete last entered digit
 `N`             | Negate
 `M`             | Toggle memory store mode
 `F1`            | Recall/save contents of Mem 1
