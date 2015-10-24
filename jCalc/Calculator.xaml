@@ -1,0 +1,117 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="jCalc" Height="404" Width="206" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" Topmost="True">
+
+    <Window.Resources>
+        <RoutedUICommand x:Key="number"/>
+        <RoutedUICommand x:Key="decimal"/>
+        <RoutedUICommand x:Key="equals"/>
+        <RoutedUICommand x:Key="math"/>
+        <RoutedUICommand x:Key="clear"/>
+        <RoutedUICommand x:Key="negate"/>
+        <RoutedUICommand x:Key="back"/>
+        <RoutedUICommand x:Key="memstore"/>
+        <RoutedUICommand x:Key="memory"/>
+    </Window.Resources>
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource number}"   Executed="NumberClick"/>
+        <CommandBinding Command="{StaticResource decimal}"  Executed="NumberClick"/>
+        <CommandBinding Command="{StaticResource equals}"   Executed="EqualsClick"/>
+        <CommandBinding Command="{StaticResource math}"     Executed="MathClick"/>
+        <CommandBinding Command="{StaticResource clear}"    Executed="ClearClick"/>
+        <CommandBinding Command="{StaticResource negate}"   Executed="NegateClick"/>
+        <CommandBinding Command="{StaticResource back}"     Executed="BackspaceClick"/>
+        <CommandBinding Command="{StaticResource memstore}" Executed="MemoryStoreClick"/>
+        <CommandBinding Command="{StaticResource memory}"   Executed="MemoryRecallClick"/>
+    </Window.CommandBindings>
+
+    <Window.InputBindings>
+        <KeyBinding Key="D0" Command="{StaticResource number}" CommandParameter="0"/>
+        <KeyBinding Key="NumPad0" Command="{StaticResource number}" CommandParameter="0"/>
+        <KeyBinding Key="D1" Command="{StaticResource number}" CommandParameter="1"/>
+        <KeyBinding Key="NumPad1" Command="{StaticResource number}" CommandParameter="1"/>
+        <KeyBinding Key="D2" Command="{StaticResource number}" CommandParameter="2"/>
+        <KeyBinding Key="NumPad2" Command="{StaticResource number}" CommandParameter="2"/>
+        <KeyBinding Key="D3" Command="{StaticResource number}" CommandParameter="3"/>
+        <KeyBinding Key="NumPad3" Command="{StaticResource number}" CommandParameter="3"/>
+        <KeyBinding Key="D4" Command="{StaticResource number}" CommandParameter="4"/>
+        <KeyBinding Key="NumPad4" Command="{StaticResource number}" CommandParameter="4"/>
+        <KeyBinding Key="D5" Command="{StaticResource number}" CommandParameter="5"/>
+        <KeyBinding Key="NumPad5" Command="{StaticResource number}" CommandParameter="5"/>
+        <KeyBinding Key="D6" Command="{StaticResource number}" CommandParameter="6"/>
+        <KeyBinding Key="NumPad6" Command="{StaticResource number}" CommandParameter="6"/>
+        <KeyBinding Key="D7" Command="{StaticResource number}" CommandParameter="7"/>
+        <KeyBinding Key="NumPad7" Command="{StaticResource number}" CommandParameter="7"/>
+        <KeyBinding Key="D8" Command="{StaticResource number}" CommandParameter="8"/>
+        <KeyBinding Key="NumPad8" Command="{StaticResource number}" CommandParameter="8"/>
+        <KeyBinding Key="D9" Command="{StaticResource number}" CommandParameter="9"/>
+        <KeyBinding Key="NumPad9" Command="{StaticResource number}" CommandParameter="9"/>
+
+        <KeyBinding Key="OemPeriod" Command="{StaticResource decimal}" CommandParameter="."/>
+        <KeyBinding Key="Decimal" Command="{StaticResource decimal}" CommandParameter="."/>
+
+        <KeyBinding Key="Enter" Command="{StaticResource equals}"/>
+        <KeyBinding Key="Return" Command="{StaticResource equals}"/>
+
+        <KeyBinding Key="Add" Command="{StaticResource math}" CommandParameter="+"/>
+        <KeyBinding Key="OemPlus" Command="{StaticResource math}" CommandParameter="+"/>
+        <KeyBinding Key="Subtract" Command="{StaticResource math}" CommandParameter="-"/>
+        <KeyBinding Key="OemMinus" Command="{StaticResource math}" CommandParameter="-"/>
+        <KeyBinding Key="Multiply" Command="{StaticResource math}" CommandParameter="*"/>
+        <KeyBinding Key="Divide" Command="{StaticResource math}" CommandParameter="/"/>
+
+        <KeyBinding Key="C" Command="{StaticResource clear}"/>
+        <KeyBinding Key="Esc" Command="{StaticResource clear}"/>
+
+        <KeyBinding Key="N" Command="{StaticResource negate}"/>
+
+        <KeyBinding Key="Backspace" Command="{StaticResource back}"/>
+
+        <KeyBinding Key="M" Command="{StaticResource memstore}"/>
+
+        <KeyBinding Key="F1" Command="{StaticResource memory}" CommandParameter="1"/>
+        <KeyBinding Key="F2" Command="{StaticResource memory}" CommandParameter="2"/>
+
+    </Window.InputBindings>
+
+    <Grid Background="Black">
+        <Button x:Name="btnZero" Content="0" HorizontalAlignment="Left" Margin="0,325,0,0" VerticalAlignment="Top" Width="100" FontSize="15" Height="50" Background="#FFEEEEEE" Command="{StaticResource number}" CommandParameter="0" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnOne" Content="1" HorizontalAlignment="Left" Margin="0,275,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Height="50" Background="#FFEEEEEE" Command="{StaticResource number}" CommandParameter="1" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnTwo" Content="2" HorizontalAlignment="Left" Margin="50,275,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Height="50" Background="#FFEEEEEE" Command="{StaticResource number}" CommandParameter="2" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnThree" Content="3" HorizontalAlignment="Left" Margin="100,275,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Height="50" Background="#FFEEEEEE" Command="{StaticResource number}" CommandParameter="3" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnFour" Content="4" HorizontalAlignment="Left" Margin="0,225,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Height="50" Background="#FFEEEEEE" Command="{StaticResource number}" CommandParameter="4" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnFive" Content="5" HorizontalAlignment="Left" Margin="50,225,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Height="50" Background="#FFEEEEEE" Command="{StaticResource number}" CommandParameter="5" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnSix" Content="6" HorizontalAlignment="Left" Margin="100,225,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Height="50" Background="#FFEEEEEE" Command="{StaticResource number}" CommandParameter="6" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnSeven" Content="7" HorizontalAlignment="Left" Margin="0,175,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Height="50" Background="#FFEEEEEE" Command="{StaticResource number}" CommandParameter="7" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnEight" Content="8" HorizontalAlignment="Left" Margin="50,175,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Height="50" Background="#FFEEEEEE" Command="{StaticResource number}" CommandParameter="8" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnNine" Content="9" HorizontalAlignment="Left" Margin="100,175,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Height="50" Background="#FFEEEEEE" Command="{StaticResource number}" CommandParameter="9" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnDecimal" Content="." HorizontalAlignment="Left" Margin="100,325,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Height="50" Background="#FFEEEEEE" Command="{StaticResource decimal}" CommandParameter="." IsTabStop="False" Focusable="False"/>
+
+        <Button x:Name="btnEquals" Content="=" HorizontalAlignment="Left" Margin="150,325,0,0" VerticalAlignment="Top" Width="50" FontSize="20" Background="#FFF08922" Height="50" Command="{StaticResource equals}" IsTabStop="False" Focusable="False" Padding="1,-4,1,1" TextOptions.TextFormattingMode="Display"/>
+        <Button x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Margin="150,275,0,0" VerticalAlignment="Top" Width="50" FontSize="20" Background="#FFF08922" Height="50" Command="{StaticResource math}" CommandParameter="+" IsTabStop="False" Focusable="False" Padding="1,-4,1,1" TextOptions.TextFormattingMode="Display"/>
+        <Button x:Name="btnMinus" Content="‒" HorizontalAlignment="Left" Margin="150,225,0,0" VerticalAlignment="Top" Width="50" FontSize="20" Background="#FFF08922" Height="50" Command="{StaticResource math}" CommandParameter="-" IsTabStop="False" Focusable="False" Padding="1,-4,1,1" TextOptions.TextFormattingMode="Display"/>
+        <Button x:Name="btnMultiply" Content="×" HorizontalAlignment="Left" Margin="150,175,0,0" VerticalAlignment="Top" Width="50" FontSize="20" Background="#FFF08922" Height="50" Command="{StaticResource math}" CommandParameter="*" IsTabStop="False" Focusable="False" Padding="1,-4,1,1" TextOptions.TextFormattingMode="Display"/>
+        <Button x:Name="btnDivide" Content="÷" HorizontalAlignment="Left" Margin="150,125,0,0" VerticalAlignment="Top" Width="50" FontSize="20" Background="#FFF08922" Height="50" Command="{StaticResource math}" CommandParameter="/" IsTabStop="False" Focusable="False" Padding="1,-4,1,1" TextOptions.TextFormattingMode="Display"/>
+
+        <Button x:Name="btnClear" Content="AC" HorizontalAlignment="Right" Margin="0,125,150,0" VerticalAlignment="Top" Width="50" FontSize="15" Background="#FFCCCCCC" Height="50" Command="{StaticResource clear}" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnNegate" Content="+/‒" HorizontalAlignment="Left" Margin="50,125,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Background="#FFCCCCCC" Height="50" Command="{StaticResource negate}" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnMemStore" Content="MS" HorizontalAlignment="Left" Margin="100,125,0,0" VerticalAlignment="Top" Width="50" FontSize="15" Background="#FFCCCCCC" Height="50" Command="{StaticResource memstore}" IsTabStop="False" Focusable="False" MouseDoubleClick="MemoryStoreDoubleClick"/>
+
+        <Button x:Name="btnMem1" Content="Mem 1" HorizontalAlignment="Left" Margin="0,100,0,0" VerticalAlignment="Top" Width="100" FontSize="12" Background="#FFCCCCCC" Foreground="#29688d" Height="25" Command="{StaticResource memory}" CommandParameter="1" IsTabStop="False" Focusable="False"/>
+        <Button x:Name="btnMem2" Content="Mem 2" HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top" Width="100" FontSize="12" Background="#FFCCCCCC" Foreground="#29688d" Height="25" Command="{StaticResource memory}" CommandParameter="2" IsTabStop="False" Focusable="False"/>
+
+        <Viewbox Stretch="Uniform" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,280" Width="180" Height="60">
+            <TextBlock x:Name="display" TextWrapping="Wrap" Foreground="White" FontSize="50" TextAlignment="Right" Text="0"/>
+        </Viewbox>
+
+        <Viewbox Stretch="Uniform" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,340" Width="180" Height="30">
+            <TextBlock x:Name="ticker" Foreground="#FFCCCCCC" FontSize="25" TextAlignment="Right" Text=""/>
+        </Viewbox>
+    </Grid>
+</Window>
