@@ -18,7 +18,7 @@
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="79,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="371" Width="268" FontSize="14.667">
             <Bold>jCalc</Bold><LineBreak/>
-            Version 1.0<LineBreak/>
+            Version 1.1<LineBreak/>
             <LineBreak/>
             Windows 4-function calculator with visual memory store.  Inspired by the standard iOS 7 calculator.<LineBreak/>
             <LineBreak/>

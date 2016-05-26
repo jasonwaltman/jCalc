@@ -61,10 +61,16 @@
 
         <KeyBinding Key="Add" Command="{StaticResource math}" CommandParameter="+"/>
         <KeyBinding Key="OemPlus" Command="{StaticResource math}" CommandParameter="+"/>
+        <KeyBinding Key="P" Command="{StaticResource math}" CommandParameter="+"/>
         <KeyBinding Key="Subtract" Command="{StaticResource math}" CommandParameter="-"/>
         <KeyBinding Key="OemMinus" Command="{StaticResource math}" CommandParameter="-"/>
+        <KeyBinding Key="S" Command="{StaticResource math}" CommandParameter="-"/>
         <KeyBinding Key="Multiply" Command="{StaticResource math}" CommandParameter="*"/>
+        <KeyBinding Key="X" Command="{StaticResource math}" CommandParameter="*"/>
+        <KeyBinding Key="D8" Modifiers="Shift" Command="{StaticResource math}" CommandParameter="*"/>
         <KeyBinding Key="Divide" Command="{StaticResource math}" CommandParameter="/"/>
+        <KeyBinding Key="OemQuestion" Command="{StaticResource math}" CommandParameter="/"/>
+        <KeyBinding Key="D" Command="{StaticResource math}" CommandParameter="/"/>
 
         <KeyBinding Key="C" Command="{StaticResource clear}"/>
         <KeyBinding Key="Esc" Command="{StaticResource clear}"/>
