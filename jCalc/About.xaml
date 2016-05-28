@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="About" Height="420.043" Width="370.672"
+        Title="About" Height="540" Width="390"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True">
 
     <Window.Background>
@@ -16,21 +16,77 @@
         <Grid.Background>
             <SolidColorBrush Color="#FFEEEEEE"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" Margin="79,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="371" Width="268" FontSize="14.667">
+        <TextBlock HorizontalAlignment="Left" Margin="80,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" FontSize="14.667">
             <Bold>jCalc</Bold><LineBreak/>
             Version 1.1<LineBreak/>
-            <LineBreak/>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="80,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" FontSize="14.667">
             Windows 4-function calculator with visual memory store.  Inspired by the standard iOS 7 calculator.<LineBreak/>
-            <LineBreak/>
-            Hotkeys:<LineBreak/>
-            • Esc, C = Clear<LineBreak/>
-            • Backspace = Delete Entry<LineBreak/>
-            • N = Negate<LineBreak/>
-            • M = Toggle Mem Store<LineBreak/>
-            • F1 = Mem 1<LineBreak/>
-            • F2 = Mem 2<LineBreak/>
-            • Double-click MS = Reset Memory<LineBreak/>
-            <LineBreak/>
+        </TextBlock>
+        <Grid Width="268" VerticalAlignment="Top" Margin="80,130,0,0" HorizontalAlignment="Left">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Shortcut" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" FontSize="13.333" />
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Action" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" FontSize="13.333" />
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Esc or C" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="Clear" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Backspace" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="Delete last entered digit" Margin="0,3" VerticalAlignment="Center" TextWrapping="Wrap" />
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="N or !" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="Negate" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="M" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="4" Grid.Column="1" Text="Toggle memory store mode" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="F1" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="5" Grid.Column="1" Text="Recall/save contents of Mem 1" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="F2" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="6" Grid.Column="1" Text="Recall/save contents of Mem 2 " Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Double-click MS" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="7" Grid.Column="1" Text="Reset both memory stores" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock Grid.Row="8" Grid.Column="0" Text="+ or A" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="8" Grid.Column="1" Text="Add" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock Grid.Row="9" Grid.Column="0" Text="- or S" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="9" Grid.Column="1" Text="Subtract" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock Grid.Row="10" Grid.Column="0" Text="* or X" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="10" Grid.Column="1" Text="Multiply" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock Grid.Row="11" Grid.Column="0" Text="/ or D" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="11" Grid.Column="1" Text="Divide" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock Grid.Row="12" Grid.Column="0" Text="Enter or Return" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="12" Grid.Column="1" Text="Equals" Margin="0,3" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+        </Grid>
+
+        <TextBlock HorizontalAlignment="Left" Margin="80,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" FontSize="14.667">
             by Jason Waltman<LineBreak/>
             <Hyperlink NavigateUri="https://github.com/jasonwaltman/jCalc" RequestNavigate="Hyperlink_RequestNavigate">https://github.com/jasonwaltman/jCalc</Hyperlink>
         </TextBlock>

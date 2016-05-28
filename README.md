@@ -11,15 +11,21 @@ jCalc is a small Windows Presentation Foundation (WPF) Visual Studio (2015) proj
 * Recent history is shown at top of main display
 * jCalc stays on top of other windows when it loses focus
 
-Shortcuts       | Action
---------------- | -------------
-`Esc` or `C`    | Clear / All Clear
-`Backspace`     | Delete last entered digit
-`N`             | Negate
-`M`             | Toggle memory store mode
-`F1`            | Recall/save contents of Mem 1
-`F2`            | Recall/save contents of Mem 2
-Double-click MS | Reset both memory stores
+Shortcuts           | Action
+------------------- | -------------
+`Esc` or `C`        | Clear / All Clear
+`Backspace`         | Delete last entered digit
+`N` or `!`          | Negate
+`M`                 | Toggle memory store mode
+`F1`                | Recall/save contents of Mem 1
+`F2`                | Recall/save contents of Mem 2
+Double-click MS     | Reset both memory stores
+`+` or `A`          | Add
+`-` or `S`          | Subtract
+`*` or `X`          | Multiply
+`/` or `D`          | Divide
+`Enter` or `Return` | Equals
+
 
 When in memory store mode, the memory store buttons are highlighted.  Clicking one of the memory stores (or pressing the corresponding  function key) will save the currently displayed value into memory.  When not in memory store mode (i.e., memory store buttons are not highlighted) clicking a store button or pressing the corresponding function key will copy the stored value into the display entry.
 

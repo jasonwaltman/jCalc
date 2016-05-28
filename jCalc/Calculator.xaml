@@ -61,7 +61,7 @@
 
         <KeyBinding Key="Add" Command="{StaticResource math}" CommandParameter="+"/>
         <KeyBinding Key="OemPlus" Command="{StaticResource math}" CommandParameter="+"/>
-        <KeyBinding Key="P" Command="{StaticResource math}" CommandParameter="+"/>
+        <KeyBinding Key="A" Command="{StaticResource math}" CommandParameter="+"/>
         <KeyBinding Key="Subtract" Command="{StaticResource math}" CommandParameter="-"/>
         <KeyBinding Key="OemMinus" Command="{StaticResource math}" CommandParameter="-"/>
         <KeyBinding Key="S" Command="{StaticResource math}" CommandParameter="-"/>
@@ -76,6 +76,7 @@
         <KeyBinding Key="Esc" Command="{StaticResource clear}"/>
 
         <KeyBinding Key="N" Command="{StaticResource negate}"/>
+        <KeyBinding Key="D1" Modifiers="Shift" Command="{StaticResource negate}"/>
 
         <KeyBinding Key="Backspace" Command="{StaticResource back}"/>
 
